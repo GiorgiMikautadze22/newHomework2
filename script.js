@@ -35,10 +35,6 @@ darkBg.style.backgroundColor = "#252B42";
 darkBg.style.display = "flex";
 darkBg.style.justifyContent = "center";
 
-// mainTextDiv.style.display = "flex";
-// mainTextDiv.style.justifyContent = "center";
-// mainTextDiv.style.margin = "auto";
-
 welcome.innerHTML = "Welcome";
 welcome.style.fontSize = "16px";
 welcome.style.color = "#23A6F0";
@@ -105,15 +101,15 @@ cardDiv.style.display = "flex";
 cardDiv.style.gap = "30px";
 cardDiv.style.marginBottom = "80px";
 
-leftCard.style.backgroundColor = "white";
-leftCard.style.width = "328px";
-leftCard.style.height = "292px";
-leftCard.style.padding = "35px 40px";
+function sameCards(a) {
+  a.style.backgroundColor = "white";
+  a.style.width = "328px";
+  a.style.height = "292px";
+  a.style.padding = "35px 40px";
+}
 
-middleCard.style.backgroundColor = "white";
-middleCard.style.width = "328px";
-middleCard.style.height = "292px";
-middleCard.style.padding = "35px 40px";
+sameCards(leftCard);
+sameCards(middleCard);
 
 rightCard.style.backgroundColor = "#23A6F0";
 rightCard.style.width = "328px";
@@ -121,6 +117,7 @@ rightCard.style.height = "292px";
 rightCard.style.padding = "35px 40px";
 
 leftCardIcon.src = "./assets/fixed-width.svg";
+
 leftCardTitle.innerHTML = "training Courses";
 leftCardTitle.style.fontFamily = "Montserrat";
 leftCardTitle.style.fontSize = "16px";
@@ -128,43 +125,39 @@ leftCardTitle.style.fontWeight = "700";
 leftCardTitle.style.color = "#252B42";
 leftCardTitle.style.margin = "20px 0";
 
-leftCardLine.style.backgroundColor = "#E74040";
-leftCardLine.style.width = "50px";
-leftCardLine.style.height = "2px";
-leftCardLine.style.border = "none";
-leftCardLine.style.marginBottom = "20px";
+function cardLine(el) {
+  el.style.backgroundColor = "#E74040";
+  el.style.width = "50px";
+  el.style.height = "2px";
+  el.style.border = "none";
+  el.style.marginBottom = "20px";
+}
 
-leftCardDescription.innerHTML =
-  "The gradual accumulation of information about atomic and small-scale behaviour...";
-leftCardDescription.style.fontSize = "14px";
-leftCardDescription.style.fontFamily = "Montserrat";
-leftCardDescription.style.color = "#737373";
-leftCardDescription.style.fontWeight = "400";
-leftCardDescription.style.lineHeight = "20px";
-leftCardDescription.style.letterSpacing = "0.2px";
+function cardDes(el) {
+  el.innerHTML =
+    "The gradual accumulation of information about atomic and small-scale behaviour...";
+  el.style.fontSize = "14px";
+  el.style.fontFamily = "Montserrat";
+  el.style.color = "#737373";
+  el.style.fontWeight = "400";
+  el.style.lineHeight = "20px";
+  el.style.letterSpacing = "0.2px";
+}
+
+cardLine(leftCardLine);
+cardDes(leftCardDescription);
+
+cardLine(middleCardLine);
+cardDes(middleCardDescription);
 
 middleCardIcon.src = "./assets/fixed-width (1).svg";
+
 middleCardTitle.innerHTML = "2,769 online courses";
 middleCardTitle.style.fontFamily = "Montserrat";
 middleCardTitle.style.fontSize = "16px";
 middleCardTitle.style.fontWeight = "700";
 middleCardTitle.style.color = "#252B42";
 middleCardTitle.style.margin = "20px 0";
-
-middleCardLine.style.backgroundColor = "#E74040";
-middleCardLine.style.width = "50px";
-middleCardLine.style.height = "2px";
-middleCardLine.style.border = "none";
-middleCardLine.style.marginBottom = "20px";
-
-middleCardDescription.innerHTML =
-  "The gradual accumulation of information about atomic and small-scale behaviour...";
-middleCardDescription.style.fontSize = "14px";
-middleCardDescription.style.fontFamily = "Montserrat";
-middleCardDescription.style.color = "#737373";
-middleCardDescription.style.fontWeight = "400";
-middleCardDescription.style.lineHeight = "20px";
-middleCardDescription.style.letterSpacing = "0.2px";
 
 rightCardIcon.src = "./assets/fixed-width (2).svg";
 rightCardTitle.innerHTML = "training Courses";
